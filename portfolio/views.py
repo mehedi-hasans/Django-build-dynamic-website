@@ -7,6 +7,7 @@ def home(request):
         'name' : "Mehedi Hasan",
         'department' : "Computer",
         'phone' : 56551515,
+        'friend' : ['Sakib', 'Hasan', 'Tamin', 'Liton Das']
     }
 
     return render(request, 'index.html', text)

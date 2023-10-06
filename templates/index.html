@@ -12,6 +12,14 @@
     <p>Name: {{name}}</p>
     <p>Department: {{department}}</p>
     <p>Phone: {{phone}}</p>
+    <p>Friend: </p>
+    <ul class="list-group">
+      {% for i in friend %}
+      <li class="list-group-item">{{i}}</li>
+      {% endfor  %}
+    </ul>
+      
+
   </div>
 </div>
 
