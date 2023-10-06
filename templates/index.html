@@ -5,14 +5,15 @@
 
 
 {% block content %}
-{% include "slider.html" %}
+{% include "slider.html" with sliderdata=slider %}
+
 {% load static %}
 
     <!-- ======= About Us Section ======= -->
     <section id="about-us" class="about-us">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>ABOUT US</h2>
+          <h2>ABOUT US {{slider.title}}</h2>
         </div>
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-right">
