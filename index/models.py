@@ -22,3 +22,11 @@ class Slider(models.Model):
     def __str__(self):
         return self.title
     
+#Class for client
+class Client(models.Model):
+    name = models.CharField(max_length=100, blank=False)
+    link = models.CharField(max_length=400, blank=False)
+    image = models.ImageField(upload_to='client/', blank=False)
+
+    def __str__(self):
+        return self.name
