@@ -1,10 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login
 
 # Create your views here.
-def login(request):
+def authlogin(request):
+    if request.method=='POST':
+        myusername = request.POST['username']
+        mypassword = request.POST['password']
+        user= authenticate(request, username = myusername, password = mypassword)
+        if user is not None:
+            login(request, user)
+            return redirect('profile')
+
+        else:
+            print('Invalid Username or Password')
+
     return render(request, 'authentication/login.html')
 
-def registration(request):
+def authregistration(request):
     return render(request, 'authentication/registration.html')
 
 def forgetpassword(request):
