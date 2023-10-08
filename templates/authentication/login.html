@@ -33,10 +33,7 @@
                     <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                   </div>
 
-                    <div class="form-group  my-4">
-                        <input type="password" name="password" class="form-control" id="name" placeholder="Your Password" required>
-                    </div>
-                    <small><a href="#">Forget Password </a> </small>
+                    <small><a href="{% url 'forgetpassword' %}">Forget Password </a> </small>
               {% comment %} <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
@@ -44,7 +41,7 @@
               </div> {% endcomment %}
               <div class="text-center mt-3"><button class='btn btn-success' type="submit">Log In</button></div>
             </form>
-            <small>Don't have an Account <a href="#">Register Now</a> </small>
+            <small>Don't have an Account <a href="{% url 'registration' %}">Register Now</a> </small>
           </div>
        
         </div>
