@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'employee',
     'index',
     'contact',
+    'authentication',
 ]
 
 MIDDLEWARE = [

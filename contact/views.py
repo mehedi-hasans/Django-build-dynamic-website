@@ -17,7 +17,10 @@ def contact(request):
         'contactdata': contactlistdata,
     }
 
-
+    # contactmessageFrontdata = Contactform.objects.all()
+    # contextmessage = {
+    #     'message': contactmessageFrontdata
+    # }
 
     return render(request, 'contact.html', context)
 
