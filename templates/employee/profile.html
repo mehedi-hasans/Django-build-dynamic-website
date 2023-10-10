@@ -32,13 +32,16 @@
 
                 <div class="col-lg-6 info mt-4 mt-lg-0">
   
-                  <h4>Name:</h4>
+                  <h4>Details:</h4>
+                  <p>Login By <b>{{user.username}}</b> </p>
+                  <p>User Mail <b>{{user.email}}</b> </p>
+                  
               
                 </div>
 
                 <div class="col-lg-6 info mt-4 mt-lg-0">
      
-                  <h4><a href="#">Log Out: </a></h4>
+                  <h4><a href="{% url 'logout' %}">Log Out: </a></h4>
           
                 </div>
               </div>
